@@ -1,16 +1,24 @@
 # MiniShell
 
-# Mini Shell (Linux)
+🧠 Project Overview
 
-## Description
-This project is a Mini Shell implemented in C. It behaves like a basic Linux shell where the user can execute commands.
+This project is a Mini Shell developed in C on Linux, designed to simulate basic functionalities of a Unix shell like Bash.
 
-## Features
-- Internal Commands (cd, pwd, exit, jobs, fg, bg)
-- External Commands (ls, cat, etc.)
-- Pipe Support (|)
-- Signal Handling (Ctrl+C, Ctrl+Z)
-- Job Control
+It allows users to interact with the operating system by entering commands, which are then processed and executed using system calls.
+
+⚙️ Key Features
+
+• Custom shell prompt (PS1 support)
+
+• Internal commands (cd, pwd, exit, jobs, fg, bg)
+
+• External command execution (ls, cat, etc.)
+
+• Pipe handling (|)
+
+• Signal handling (Ctrl+C, Ctrl+Z)
+
+• Job control using linked list
 
 ## Technologies Used
 - C Programming
