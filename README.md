@@ -1,27 +1,28 @@
 # MiniShell
 
-🧠 Project Overview
+## 🧠 Project Overview
 
-This project is a Mini Shell developed in C on Linux, designed to simulate basic functionalities of a Unix shell like Bash.
+This project is a Mini Shell developed in C on Linux.  
+It simulates basic functionalities of a Unix shell like Bash.
 
-It allows users to interact with the operating system by entering commands, which are then processed and executed using system calls.
+It allows users to enter commands, which are processed and executed using Linux system calls.
 
-⚙️ Key Features
+---
 
-• Custom shell prompt (PS1 support)
+## ⚙️ Key Features
 
-• Internal commands (cd, pwd, exit, jobs, fg, bg)
+- Custom shell prompt (PS1 support)
+- Internal commands (cd, pwd, exit, jobs, fg, bg)
+- External commands (ls, cat, etc.)
+- Pipe support (|)
+- Signal handling (Ctrl+C, Ctrl+Z)
+- Job control using linked list
 
-• External command execution (ls, cat, etc.)
+---
 
-• Pipe handling (|)
+## 🧩 Block Diagram
 
-• Signal handling (Ctrl+C, Ctrl+Z)
-
-• Job control using linked list
-
-🧩 Block Diagram
-
+```
 +-------------------+
 |   User Input      |
 |  (Keyboard)       |
@@ -64,12 +65,19 @@ It allows users to interact with the operating system by entering commands, whic
                       +------------------+
                       |   Output to User |
                       +------------------+
+```
 
-## Technologies Used
+---
+
+## 🛠️ Technologies Used
+
 - C Programming
 - Linux System Calls
 
-## System Calls Used
+---
+
+## ⚡ System Calls Used
+
 - fork()
 - execvp()
 - waitpid()
@@ -77,19 +85,39 @@ It allows users to interact with the operating system by entering commands, whic
 - dup2()
 - signal()
 
-## How to Compile
+---
+
+## ▶️ How to Compile
+
+```
 gcc *.c -o minishell
+```
 
-## How to Run
+---
+
+## ▶️ How to Run
+
+```
 ./minishell
+```
 
-## Sample Commands
-ls  
-pwd  
-cd /home  
-ls | wc  
-sleep 10  
-jobs  
-fg  
-bg  
+---
 
+## 💻 Sample Commands
+
+```
+ls
+pwd
+cd /home
+ls | wc
+sleep 10
+jobs
+fg
+bg
+```
+
+---
+
+## 👤 Author
+
+Your Name
