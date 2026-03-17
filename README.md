@@ -22,6 +22,49 @@ It allows users to interact with the operating system by entering commands, whic
 
 🧩 Block Diagram
 
++-------------------+
+|   User Input      |
+|  (Keyboard)       |
++---------+---------+
+          |
+          v
++-------------------+
+|   Mini Shell      |
+|  (scan_input)     |
++---------+---------+
+          |
+          v
++-------------------+
+| Command Parsing   |
+| (get_command)     |
++---------+---------+
+          |
+          v
++-----------------------------+
+| Command Type Identification |
+| Built-in / External / Error |
++---------+-------------------+
+          |
+   -------------------------
+   |                       |
+   v                       v
++-----------+       +----------------+
+| Internal  |       | External       |
+| Commands  |       | Commands       |
++-----------+       +----------------+
+     |                     |
+     v                     v
++-----------+       +----------------------+
+| Execute   |       | fork()               |
+| Directly  |       | execvp()             |
++-----------+       | waitpid()            |
+                    +----------+-----------+
+                               |
+                               v
+                      +------------------+
+                      |   Output to User |
+                      +------------------+
+
 ## Technologies Used
 - C Programming
 - Linux System Calls
