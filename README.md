@@ -118,6 +118,3 @@ bg
 
 ---
 
-## 👤 Author
-
-Your Name
