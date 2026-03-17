@@ -20,6 +20,8 @@ It allows users to interact with the operating system by entering commands, whic
 
 • Job control using linked list
 
+🧩 Block Diagram
+
 ## Technologies Used
 - C Programming
 - Linux System Calls
